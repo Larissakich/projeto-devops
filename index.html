@@ -1,14 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto DevOps</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🚀 Projeto DevOps na Prática</h1>
-  <p>Deploy automático com CI/CD + Terraform</p>
 
-  <button onclick="mensagem()">Clique aqui</button>
+  <nav>
+    <div class="logo">DevOps<span>Lab</span></div>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <span class="badge">CI/CD + Terraform</span>
+      <h1>Deploy automático<br>na prática</h1>
+      <p>Pipeline completo do código à produção com integração contínua, infraestrutura como código e deploys automatizados.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="mensagem()">Ver pipeline</button>
+        <a href="#sobre" class="btn-secondary">Saiba mais</a>
+      </div>
+    </div>
+    <div class="hero-graphic">
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="pipe-icon">&#128196;</div>
+          <span>Code</span>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">&#9881;</div>
+          <span>Build</span>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">&#9989;</div>
+          <span>Test</span>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step active">
+          <div class="pipe-icon">&#128640;</div>
+          <span>Deploy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <h2>100%</h2>
+      <p>Automatizado</p>
+    </div>
+    <div class="stat">
+      <h2>&lt; 5min</h2>
+      <p>Tempo de deploy</p>
+    </div>
+    <div class="stat">
+      <h2>Zero</h2>
+      <p>Downtime</p>
+    </div>
+  </section>
+
+  <section id="stack" class="stack">
+    <h2>Stack utilizada</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon">&#9881;</div>
+        <h3>GitHub Actions</h3>
+        <p>Automação de CI/CD direto no repositório</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">&#127981;</div>
+        <h3>Terraform</h3>
+        <p>Infraestrutura como código e provisionamento</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Projeto DevOps &copy; 2026 — Feito para aprender na prática</p>
+  </footer>
+
+  <div id="toast" class="toast">Pipeline executado com sucesso!</div>
 
   <script src="script.js"></script>
 </body>
