@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: CI/CD Pipeline
 
 on:
   push:
@@ -22,3 +22,6 @@ jobs:
 
       - name: Rodar testes
         run: npm test
+
+      - name: Deploy (simulado)
+        run: echo "Deploy realizado com sucesso!!"
