@@ -23,5 +23,8 @@ jobs:
       - name: Rodar testes
         run: npm test
 
-      - name: Deploy (simulado)
-        run: echo "Deploy realizado com sucesso!!"
+      - name: Build da imagem Docker
+        run: docker build -t devops-app .
+
+      - name: Rodar container (deploy)
+        run: docker run devops-app
